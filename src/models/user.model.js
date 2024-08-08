@@ -10,30 +10,33 @@ const userSchema = new mongoose.Schema(
       required: true,
       unique: true,
       lowercase: true,
+      trim: true,
       index: true,
     },
     password: {
       type: String,
-      required: true,
+      required: [true, "Password is required" ],
     },
     email: {
       type: String,
       required: true,
       unique: true,
       lowercase: true,
+      trim: true,
     },
     avatar: {
       type: String, // cloudinary url
       required: true
     },
-    refreshToken: {
-      type: String,
-      required: true,
-    },
+    // refreshToken: {
+    //   type: String,
+    //   required: true,
+    // },
     fullname: {
       type: String,
-      unique: true,
       required: true,
+      trim: true,
+      index: true
     },
     watchHistory: [
       {
@@ -43,7 +46,7 @@ const userSchema = new mongoose.Schema(
     ],
     coverImage: {
       type: String,
-      required: true
+      
     },
   },
   { timestamps: true }

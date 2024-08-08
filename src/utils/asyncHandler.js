@@ -16,16 +16,16 @@ export {asyncHandler}
 
 
 
-const asyncFunction = (requestFunction) => async (req, res, next) => {
-    try {
-        await requestFunction(req, res, next)
-    } catch (error) {
-        res.status(error.code || 500).json ({
-            success: false,
-            message: error.message
-        })
-    }
-}
+// const asyncFunction = (requestFunction) => async (req, res, next) => {
+//     try {
+//         await requestFunction(req, res, next)
+//     } catch (error) {
+//         res.status(error.code || 500).json ({
+//             success: false,
+//             message: error.message
+//         })
+//     }
+// }
 
-export default asyncFunction
+// export default asyncFunction
 
