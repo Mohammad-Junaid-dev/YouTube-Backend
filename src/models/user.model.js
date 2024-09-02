@@ -28,10 +28,17 @@ const userSchema = new mongoose.Schema(
       type: String, // cloudinary url
       required: true
     },
+<<<<<<< HEAD
     refreshToken: {
       type: String,
       
     },
+=======
+    // refreshToken: {
+    //   type: String,
+    //   required: true,
+    // },
+>>>>>>> 5340e1c4a3a924ea80c1ad97400942ec2e1f6784
     fullname: {
       type: String,
       required: true,
